@@ -1,0 +1,20 @@
+<div class="recipe-grid">
+    <h1>FlavourSpot</h1>
+    <div class="header">
+      <span class="section-title">Recetas</span>
+      <button class="filter-btn active">Añadir Receta +</button>
+    </div>
+    <div class="recipes">
+      <div class="recipe-card" *ngFor="let recipe of recipes">
+        <img [src]="recipe.imagenUrl" alt="{{recipe.nombre}}">
+        <div class="recipe-info">
+          <h3>{{recipe.nombre}}</h3>
+          <div class="details">
+            <span *ngIf="recipe.favorita == true">Favorita <span class="icon-heart"></span></span>
+            <span>{{recipe.tiempo}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
